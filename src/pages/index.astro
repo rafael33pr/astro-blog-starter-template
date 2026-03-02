@@ -1,10 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deja de Pagarle a LUMA | Energía Solar Puerto Rico</title>
+    
+    <!-- NUEVAS FUENTES DE IMPACTO -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
@@ -12,14 +17,11 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            line-height: 1.6;
-            color: #1a202c;
-            background: #fff;
-        }
-
+        /* FUENTES PRINCIPALES */
         :root {
+            --font-display: 'Space Grotesk', sans-serif;  /* Títulos impacto */
+            --font-body: 'Inter', sans-serif;              /* Lectura fácil */
+            
             --solar-orange: #ff6b35;
             --solar-yellow: #f7c948;
             --sky-blue: #0ea5e9;
@@ -29,14 +31,31 @@
             --whatsapp: #25d366;
         }
 
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: #1a202c;
+            background: #fff;
+        }
+
+        /* IMPACTO TIPOGRÁFICO */
+        h1, h2, h3, .price-tag, .stat-number, .savings-amount {
+            font-family: var(--font-display);
+            font-weight: 700;
+            letter-spacing: -0.02em; /* Tight para impacto */
+        }
+
         /* Urgency Bar */
         .urgency-bar {
             background: linear-gradient(90deg, var(--solar-orange), #ff8c42);
             color: white;
             text-align: center;
             padding: 1rem;
-            font-weight: 700;
-            font-size: 0.95rem;
+            font-family: var(--font-display);
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -59,29 +78,32 @@
         }
 
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            line-height: 1.2;
+            font-size: 4rem;
+            line-height: 0.9;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
         }
 
         .hero h1 span {
             color: var(--solar-yellow);
             display: block;
-            font-size: 3.5rem;
-            font-weight: 800;
+            font-size: 5rem;
+            font-weight: 700;
         }
 
         .hero-subtitle {
+            font-family: var(--font-body);
             font-size: 1.3rem;
             margin-bottom: 2rem;
             opacity: 0.95;
+            font-weight: 400;
         }
 
         .hero-stats {
             display: flex;
             justify-content: center;
             gap: 3rem;
-            margin: 2rem 0;
+            margin: 2.5rem 0;
             flex-wrap: wrap;
         }
 
@@ -90,21 +112,32 @@
         }
 
         .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
+            font-size: 3.5rem;
             color: var(--solar-yellow);
             display: block;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .cta-button {
             display: inline-block;
+            font-family: var(--font-display);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             background: linear-gradient(135deg, var(--solar-orange), #ff8c42);
             color: white;
             padding: 1.3rem 3rem;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             text-decoration: none;
             border-radius: 50px;
-            font-weight: 700;
             transition: all 0.3s ease;
             box-shadow: 0 4px 20px rgba(255,107,53,0.4);
             margin: 0.5rem;
@@ -125,7 +158,7 @@
 
         /* Problem Section */
         .problem {
-            padding: 4rem 2rem;
+            padding: 5rem 2rem;
             background: var(--dark-bg);
             color: white;
             text-align: center;
@@ -137,28 +170,35 @@
         }
 
         .section-title {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 1rem;
+            text-transform: uppercase;
         }
 
         .highlight-box {
             background: rgba(255,107,53,0.2);
             border: 2px solid var(--solar-orange);
             border-radius: 15px;
-            padding: 2rem;
+            padding: 2.5rem;
             margin: 2rem 0;
         }
 
         .big-number {
-            font-size: 4rem;
-            font-weight: 800;
+            font-size: 5rem;
             color: var(--solar-orange);
             display: block;
+            line-height: 1;
+        }
+
+        .highlight-box p {
+            font-family: var(--font-body);
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
         }
 
         /* Comparison Section */
         .comparison {
-            padding: 4rem 2rem;
+            padding: 5rem 2rem;
             background: white;
         }
 
@@ -170,24 +210,26 @@
         }
 
         .comparison-card {
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 15px;
             text-align: center;
         }
 
         .luma-card {
             background: #fee2e2;
-            border: 2px solid #dc2626;
+            border: 3px solid #dc2626;
         }
 
         .solar-card {
             background: #dcfce7;
-            border: 2px solid #16a34a;
+            border: 3px solid #16a34a;
         }
 
         .card-title {
+            font-family: var(--font-display);
             font-size: 1.5rem;
             font-weight: 700;
+            text-transform: uppercase;
             margin-bottom: 1rem;
         }
 
@@ -195,31 +237,44 @@
         .solar-card .card-title { color: #16a34a; }
 
         .price-tag {
-            font-size: 3rem;
-            font-weight: 800;
-            margin: 1rem 0;
+            font-size: 4rem;
+            margin: 1.5rem 0;
+            line-height: 1;
         }
 
         .luma-card .price-tag { color: #dc2626; }
         .solar-card .price-tag { color: #16a34a; }
 
+        .comparison-card p {
+            font-family: var(--font-body);
+            margin: 0.5rem 0;
+        }
+
         .savings-box {
             background: linear-gradient(135deg, var(--solar-orange), #ff8c42);
             color: white;
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 15px;
             text-align: center;
             margin-top: 2rem;
         }
 
+        .savings-box p:first-child {
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1rem;
+        }
+
         .savings-amount {
-            font-size: 3.5rem;
-            font-weight: 800;
+            font-size: 5rem;
+            line-height: 1;
+            margin: 1rem 0;
         }
 
         /* How It Works */
         .how-it-works {
-            padding: 4rem 2rem;
+            padding: 5rem 2rem;
             background: var(--light-bg);
         }
 
@@ -239,65 +294,96 @@
         }
 
         .step-number {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             background: var(--deep-blue);
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-family: var(--font-display);
+            font-size: 1.8rem;
             font-weight: 700;
             margin: 0 auto 1rem;
         }
 
+        .step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .step p {
+            font-family: var(--font-body);
+            color: #64748b;
+        }
+
         /* Testimonial */
         .testimonial {
-            padding: 4rem 2rem;
+            padding: 5rem 2rem;
             background: var(--dark-bg);
             color: white;
             text-align: center;
         }
 
         .testimonial-text {
-            font-size: 1.3rem;
+            font-family: 'Merriweather', serif;
+            font-size: 1.4rem;
             font-style: italic;
-            max-width: 700px;
-            margin: 0 auto 1rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
         }
 
         .testimonial-author {
+            font-family: var(--font-display);
             color: var(--solar-yellow);
-            font-weight: 700;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         /* Final CTA */
         .final-cta {
-            padding: 4rem 2rem;
+            padding: 5rem 2rem;
             background: linear-gradient(135deg, var(--deep-blue), var(--sky-blue));
             color: white;
             text-align: center;
         }
 
         .final-cta h2 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .final-cta p {
+            font-family: var(--font-body);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .whatsapp-big {
             display: inline-flex;
             align-items: center;
             gap: 1rem;
+            font-family: var(--font-display);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             background: var(--whatsapp);
             color: white;
             padding: 1.5rem 3rem;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             text-decoration: none;
             border-radius: 50px;
-            font-weight: 700;
             margin-top: 2rem;
             transition: transform 0.3s;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.4);
         }
 
         .whatsapp-big:hover {
@@ -310,24 +396,25 @@
             color: #94a3b8;
             text-align: center;
             padding: 2rem;
+            font-family: var(--font-body);
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .hero h1 span { font-size: 2.5rem; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero h1 span { font-size: 3rem; }
             .comparison-grid { grid-template-columns: 1fr; }
-            .hero-stats { gap: 1.5rem; }
-            .big-number { font-size: 3rem; }
+            .stat-number { font-size: 2.5rem; }
+            .big-number, .savings-amount { font-size: 3.5rem; }
+            .section-title { font-size: 2rem; }
         }
     </style>
-<base target="_blank">
 </head>
 <body>
 
     <!-- Urgency Bar -->
     <div class="urgency-bar">
-        ⚡ OFERTA ESPECIAL: EVALUACIÓN GRATIS ESTA SEMANA ⚡
+        ⚡ Oferta Especial: Evaluación Gratis Esta Semana ⚡
     </div>
 
     <!-- Hero Section -->
@@ -341,38 +428,38 @@
             
             <div class="hero-stats">
                 <div class="stat-item">
-                    <span class="stat-number">$50,000+</span>
-                    <span>Le darás a LUMA en 25 años</span>
+                    <span class="stat-number">$50K+</span>
+                    <span class="stat-label">A LUMA en 25 años</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">$23,000</span>
-                    <span>Pagas una vez con solar</span>
+                    <span class="stat-number">$23K</span>
+                    <span class="stat-label">Un pago con solar</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">$27,000</span>
-                    <span>De ahorro garantizado</span>
+                    <span class="stat-number">$27K</span>
+                    <span class="stat-label">Tu ahorro</span>
                 </div>
             </div>
 
-            <a href="https://wa.me/17879729553?text=Hola,%20quiero%20saber%20cuánto%20ahorraría%20con%20solar%20en%20mi%20casa" class="cta-button whatsapp-btn">
-                💬 Hablar por WhatsApp Ahora
+            <a href="https://wa.me/17879729553?text=Hola,%20quiero%20saber%20cuánto%20ahorraría%20con%20solar" class="cta-button whatsapp-btn">
+                💬 Hablar por WhatsApp
             </a>
-            <br><br>
-            <a href="#comparacion" class="cta-button">Ver la Matemática →</a>
+            <br>
+            <a href="#comparacion" class="cta-button">Ver los Números →</a>
         </div>
     </section>
 
     <!-- Problem Section -->
     <section class="problem">
         <div class="container">
-            <h2 class="section-title">La Realidad de Tu Factura de LUMA</h2>
+            <h2 class="section-title">La Realidad de Tu Factura</h2>
             
             <div class="highlight-box">
                 <span class="big-number">$120</span>
-                <p style="font-size: 1.2rem;">Pagas hoy. Mañana será más.</p>
+                <p>Hoy. Mañana será más.</p>
             </div>
 
-            <p style="font-size: 1.1rem; margin-top: 1rem;">
+            <p style="font-size: 1.1rem; margin-top: 1.5rem;">
                 Con subidas de 5-8% cada año, en una década pagarás $200+ mensuales.<br>
                 En 25 años, le habrás dado a LUMA más de <strong>$50,000</strong>.<br>
                 Y seguirás pagando.
@@ -384,7 +471,7 @@
     <section class="comparison" id="comparacion">
         <div class="container">
             <h2 class="section-title" style="text-align: center; color: var(--deep-blue);">
-                Comparación Real: 25 Años
+                Comparación: 25 Años
             </h2>
 
             <div class="comparison-grid">
@@ -395,34 +482,32 @@
                     <hr style="margin: 1rem 0; border-color: #dc2626;">
                     <p>❌ Precio sube cada año</p>
                     <p>❌ Nunca terminas de pagar</p>
-                    <p>❌ Dependes de la red</p>
                     <p>❌ Apagones incluidos</p>
                 </div>
 
                 <div class="comparison-card solar-card">
-                    <div class="card-title">🟢 Pagar Cash Solar</div>
+                    <div class="card-title">🟢 Solar Cash</div>
                     <div class="price-tag">$23,000</div>
                     <p>Una sola vez</p>
                     <hr style="margin: 1rem 0; border-color: #16a34a;">
-                    <p>✅ Precio fijo para siempre</p>
                     <p>✅ Recuperas en 16 años</p>
-                    <p>✅ Años 17-25: $0 + $10,800 ganado</p>
-                    <p>✅ Independencia total</p>
+                    <p>✅ Años 17-25: $10,800 ganado</p>
+                    <p>✅ Luego $0 para siempre</p>
                 </div>
             </div>
 
             <div class="savings-box">
-                <p style="font-size: 1.2rem;">AHORRO TOTAL EN 25 AÑOS</p>
+                <p>Ahorro Total en 25 Años</p>
                 <div class="savings-amount">$27,000+</div>
                 <p style="margin-top: 1rem;">
-                    Más tranquilidad de saber exactamente cuánto pagas.<br>
-                    Sin sorpresas. Sin subidas. Sin depender de LUMA.
+                    Más tranquilidad de precio fijo.<br>
+                    Sin sorpresas. Sin subidas.
                 </p>
             </div>
 
             <div style="text-align: center; margin-top: 2rem;">
-                <a href="https://wa.me/1939XXXXXXX?text=Hola,%20quiero%20mi%20análisis%20personalizado%20de%20ahorro" class="cta-button whatsapp-btn" style="font-size: 1.2rem;">
-                    💬 Quiero Mi Análisis Gratis por WhatsApp
+                <a href="https://wa.me/1939XXXXXXX?text=Hola,%20quiero%20mi%20análisis%20personalizado" class="cta-button whatsapp-btn">
+                    💬 Quiero Mi Análisis Gratis
                 </a>
             </div>
         </div>
@@ -432,14 +517,14 @@
     <section class="how-it-works">
         <div class="container">
             <h2 class="section-title" style="text-align: center; color: var(--deep-blue);">
-                ¿Cómo Funciona?
+                Cómo Funciona
             </h2>
 
             <div class="steps">
                 <div class="step">
                     <div class="step-number">1</div>
-                    <h3>Pagas $23,000 Una Vez</h3>
-                    <p>Sistema completo: paneles + batería 16kWh + instalación + permisos.</p>
+                    <h3>Pagas $23,000</h3>
+                    <p>Una vez. Sistema completo: paneles + batería 16kWh + todo incluido.</p>
                 </div>
                 
                 <div class="step">
@@ -451,21 +536,14 @@
                 <div class="step">
                     <div class="step-number">3</div>
                     <h3>Recuperas en 16 Años</h3>
-                    <p>$120 × 12 meses × 16 años = $23,040. Inversión recuperada.</p>
+                    <p>$120 × 12 × 16 = $23,040. Tu inversión de vuelta.</p>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">4</div>
                     <h3>Ganas $10,800+</h3>
-                    <p>Años 17-25: $0 de factura. Eso es $10,800 que LUMA no te quita.</p>
+                    <p>Años 17-25: $0 factura. Eso es ganancia pura.</p>
                 </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 2rem;">
-                <p style="font-size: 1.1rem; color: #475569; margin-bottom: 1rem;">
-                    Y después del año 25... sigues con luz gratis.<br>
-                    Mientras tu vecino sigue pagando cada mes.
-                </p>
             </div>
         </div>
     </section>
@@ -474,36 +552,35 @@
     <section class="testimonial">
         <div class="container">
             <p class="testimonial-text">
-                "Pagué $23,000 cash hace 6 años. Hice las cuentas: ya recuperé mi inversión. 
-                Ahora cada mes que pasa es dinero ganado. Mi vecino sigue pagando $150+ a LUMA 
-                y subiendo. Yo pago $0. Mi único arrepentimiento es no haberlo hecho antes."
+                "Pagué $23,000 cash hace 6 años. Ya recuperé mi inversión. 
+                Ahora cada mes es dinero ganado. Mi vecino sigue pagando $150+ a LUMA 
+                y subiendo. Yo pago $0."
             </p>
             <p class="testimonial-author">— Carlos M., Bayamón</p>
-            <p style="opacity: 0.8;">Recuperó su inversión en año 16. Ahora gana $120/mes en ahorros.</p>
+            <p style="opacity: 0.8; margin-top: 0.5rem;">Recuperó inversión en año 16. Ahora gana $120/mes.</p>
         </div>
     </section>
 
     <!-- Final CTA -->
     <section class="final-cta">
         <div class="container">
-            <h2>¿Sigues Dudando Mientras LUMA Sube las Tarifas?</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 1rem;">
+            <h2>¿Sigues Dudando?</h2>
+            <p>
                 Cada mes que esperas es $120 que donas a LUMA.<br>
-                En un año son $1,440. En 5 años son $7,200 que nunca recuperarás.
+                En un año: $1,440. En 5 años: $7,200 perdidos.
             </p>
-            <p style="font-size: 1.1rem; opacity: 0.9;">
-                Te doy dos opciones:<br>
-                1. Seguir pagando $120 que suben cada mes<br>
-                2. Poner $23,000 una vez y liberarte para siempre
+            <p>
+                Opción A: Seguir pagando $120 que suben.<br>
+                Opción B: Poner $23,000 una vez y liberarte.
             </p>
 
-            <a href="https://wa.me/17879729553?text=Hola,%20estoy%20listo%20para%20dejar%20de%20pagarle%20a%20LUMA.%20Quiero%20mi%20evaluación%20gratis" class="whatsapp-big">
+            <a href="https://wa.me/17879729553?text=Hola,%20estoy%20listo%20para%20dejar%20de%20pagarle%20a%20LUMA" class="whatsapp-big">
                 <span>💬</span>
-                <span>Quiero Mi Independencia Ahora</span>
+                <span>Quiero Mi Independencia</span>
             </a>
 
             <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
-                Evaluación gratis • Sin compromiso • Respuesta en menos de 1 hora
+                Evaluación gratis • Sin compromiso • Respuesta en 1 hora
             </p>
         </div>
     </section>
@@ -512,9 +589,6 @@
     <footer>
         <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">🇵🇷 Energía Solar Puerto Rico</p>
         <p>Libertad energética es posible. Los números no mienten.</p>
-        <p style="margin-top: 1rem; font-size: 0.8rem;">
-            No afiliado con LUMA Energy. Información educativa sobre opciones energéticas.
-        </p>
     </footer>
 
 </body>
