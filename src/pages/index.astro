@@ -183,7 +183,6 @@
             line-height: 1;
         }
 
-        /* COMPARISON SECTION - 3 COLUMNAS */
         .comparison {
             padding: 5rem 2rem;
             background: white;
@@ -314,6 +313,140 @@
             font-size: 4rem;
             line-height: 1;
             margin: 1rem 0;
+        }
+
+        /* SOBRE MÍ - RAFAEL SANTIAGO */
+        .about {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        .about-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border: 4px solid white;
+        }
+
+        .about-badge {
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--solar-orange), #ff8c42);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(255,107,53,0.4);
+            white-space: nowrap;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            color: var(--deep-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .about-name {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--solar-orange);
+            margin-bottom: 1rem;
+        }
+
+        .about-role {
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            color: #64748b;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #475569;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text strong {
+            color: var(--deep-blue);
+        }
+
+        .about-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--whatsapp);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-family: var(--font-display);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.3s;
+            margin-top: 1rem;
+        }
+
+        .about-cta:hover {
+            transform: scale(1.05);
+        }
+
+        .trust-badges {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .trust-badge span {
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .about-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .about-image {
+                max-width: 280px;
+                margin: 0 auto;
+            }
+            
+            .trust-badges {
+                justify-content: center;
+            }
         }
 
         .how-it-works {
@@ -453,7 +586,7 @@
 <body>
 
     <div class="urgency-bar">
-        ⚡ Oferta Especial: Evaluación Gratis Esta Semana ⚡
+        ⚡ Rafael Santiago te ayuda a hacer el cambio hoy ⚡
     </div>
 
     <section class="hero">
@@ -478,15 +611,63 @@
                 </div>
             </div>
 
-            <a href="https://wa.me/17879729553?text=Hola,%20quiero%20comparar%20mis%20opciones%20de%20pago" class="cta-button whatsapp-btn">
-                💬 Quiero la Mejor Opción para Mí
+            <a href="https://wa.me/17879729553?text=Hola%20Rafael,%20quiero%20hacer%20el%20cambio%20a%20solar" class="cta-button whatsapp-btn">
+                💬 Hablar con Rafael Ahora
             </a>
+        </div>
+    </section>
+
+    <!-- SOBRE MÍ - RAFAEL SANTIAGO -->
+    <section class="about" id="sobre-mi">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="https://scontent.fsig3-1.fna.fbcdn.net/v/t39.30808-6/639894455_122244638018095662_8243271466493653402_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=53a332&_nc_ohc=wdyc8Hih87oQ7kNvwHueE3H&_nc_oc=AdnJqkLTZHjMJHiGYj8vb__KJjWHwYuZBGW5HXqqVDiZqGCWNLJ7MDK_7K1i6LMfLrYkMmGdJTf7AtFojowjZTwL&_nc_zt=23&_nc_ht=scontent.fsig3-1.fna&_nc_gid=b3n0t-pQB7pdiO9ObN2yfg&_nc_ss=8&oh=00_Afxh5sYOt01n8Lpv9wEFHkS1r1JXVBtO-mEJlJLoW-KKww&oe=69AC7AAA" alt="Rafael Santiago - Consultor de Pura Energía">
+                <div class="about-badge">Consultor Certificado</div>
+            </div>
+            
+            <div class="about-content">
+                <h2>Sobre Mí</h2>
+                <div class="about-name">Rafael Santiago</div>
+                <div class="about-role">Consultor de Pura Energía</div>
+                
+                <p class="about-text">
+                    <strong>Puedo ayudarte a que hagas el cambio hoy.</strong> Sea para tu hogar o negocio, estoy plenamente convencido de que el cambio a energía solar es uno <strong>100% a tu favor</strong>.
+                </p>
+                
+                <p class="about-text">
+                    No vendo paneles. <strong>Te ayudo a entender los números reales</strong> para que tomes la mejor decisión financiera de tu vida. He visto familias pasar de pagar $400 mensuales a LUMA a pagar $0, con la tranquilidad de que su inversión se recupera y luego genera ganancias puras.
+                </p>
+                
+                <p class="about-text">
+                    Mi trabajo es simple: <strong>mostrarte la matemática sin maquillaje</strong>. Si tiene sentido para ti, te acompaño en todo el proceso. Si no, te lo digo honestamente.
+                </p>
+
+                <a href="https://wa.me/1939XXXXXXX?text=Hola%20Rafael,%20soy%20[name]%20y%20quiero%20consultar%20sobre%20solar" class="about-cta">
+                    <span>💬</span>
+                    <span>Hablemos por WhatsApp</span>
+                </a>
+
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <span>⚡</span>
+                        <span>Evaluación Gratis</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span>🏠</span>
+                        <span>Hogares y Negocios</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span>📋</span>
+                        <span>Todos los Permisos</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="problem">
         <div class="container">
-            <h2 class="section-title">Tu Factura de LUMA Hoy</h2>
+            <h2 class="section-title">La Realidad de Tu Factura de LUMA</h2>
             
             <div class="highlight-box">
                 <span class="big-number">$120</span>
@@ -501,7 +682,6 @@
         </div>
     </section>
 
-    <!-- COMPARISON 3 COLUMNAS -->
     <section class="comparison" id="comparacion">
         <div class="container">
             <h2 class="section-title" style="text-align: center; color: var(--deep-blue);">
@@ -509,7 +689,6 @@
             </h2>
 
             <div class="comparison-grid">
-                <!-- OPCIÓN 1: LUMA -->
                 <div class="comparison-card luma-card">
                     <div class="card-title">🔴 Seguir con LUMA</div>
                     <div class="price-tag">$50,000+</div>
@@ -526,7 +705,6 @@
                     <p style="font-size: 0.8rem;">Y sigues pagando después</p>
                 </div>
 
-                <!-- OPCIÓN 2: FINANCIADO -->
                 <div class="comparison-card finance-card">
                     <div class="card-title">🟡 Solar Financiado</div>
                     <div class="price-tag">$35,100</div>
@@ -543,7 +721,6 @@
                     <p style="font-size: 0.8rem;">Ahorro vs LUMA: $15,000+</p>
                 </div>
 
-                <!-- OPCIÓN 3: CASH -->
                 <div class="comparison-card solar-card">
                     <div class="card-title">🟢 Solar Cash</div>
                     <div class="price-tag">$23,000</div>
@@ -571,8 +748,8 @@
             </div>
 
             <div style="text-align: center; margin-top: 2rem;">
-                <a href="https://wa.me/17879729553?text=Hola,%20quiero%20saber%20cuál%20opción%20me%20conviene%20más" class="cta-button whatsapp-btn">
-                    💬 Ayúdame a Elegir la Mejor Opción
+                <a href="https://wa.me/1939XXXXXXX?text=Hola%20Rafael,%20quiero%20que%20me%20ayudes%20a%20elegir" class="cta-button whatsapp-btn">
+                    💬 Rafael, Ayúdame a Elegir
                 </a>
             </div>
         </div>
@@ -609,37 +786,37 @@
     <section class="testimonial">
         <div class="container">
             <p class="testimonial-text">
-                "Dudé entre financiado y cash. No tenía los $23,000, pero saqué un préstamo al 8% y igual salí ganando. 
-                Año 8 ya voy recuperado. Mi vecino sigue pagando $180 a LUMA y subiendo."
+                "Rafael no me vendió nada. Me mostró los números y dejé que hablaran solos. 
+                Hoy pago $0 a LUMA y mi sistema ya se pagó. Mi único arrepentimiento es no haberlo hecho antes."
             </p>
-            <p class="testimonial-author">— María R., Guaynabo</p>
-            <p style="opacity: 0.8;">Optó por financiamiento, pero refinanció a cash en año 3.</p>
+            <p class="testimonial-author">— Carlos M., Bayamón</p>
+            <p style="opacity: 0.8;">Cliente de Rafael, recuperó inversión en año 16</p>
         </div>
     </section>
 
     <section class="final-cta">
         <div class="container">
-            <h2>¿Cuál Es Tu Situación?</h2>
+            <h2>¿Listo para el Cambio?</h2>
             <p>
-                <strong>Tienes $23,000 disponibles:</strong> Cash es tu mejor inversión. $27,000 de ahorro.<br><br>
+                <strong>Tienes $23,000:</strong> Cash es tu mejor inversión. $27,000 de ahorro.<br><br>
                 <strong>No tienes el cash:</strong> Financiado sigue ahorrándote $15,000+ vs LUMA.<br><br>
-                <strong>Sigues con LUMA:</strong> Pierdes $50,000+ en 25 años. Y contando.
+                <strong>Sigues con LUMA:</strong> Pierdes $50,000+ en 25 años.
             </p>
 
-            <a href="https://wa.me/17879729553?text=Hola,%20quiero%20evaluar%20mis%20opciones%20de%20pago" class="whatsapp-big">
+            <a href="https://wa.me/17879729553?text=Hola%20Rafael,%20estoy%20listo%20para%20hacer%20el%20cambio" class="whatsapp-big">
                 <span>💬</span>
-                <span>Quiero Mi Evaluación Personalizada</span>
+                <span>Hablar con Rafael Ahora</span>
             </a>
 
             <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
-                Análisis gratis • Sin compromiso • Respuesta en 1 hora
+                Respuesta personalizada en menos de 1 hora • Sin compromiso
             </p>
         </div>
     </section>
 
     <footer>
-        <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">🇵🇷 Energía Solar Puerto Rico</p>
-        <p>Cash, financiado o LUMA: los números no mienten.</p>
+        <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">🇵🇷 Rafael Santiago - Pura Energía</p>
+        <p>Tu consultor de confianza para independencia energética.</p>
     </footer>
 
 </body>
