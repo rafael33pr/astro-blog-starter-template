@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deja de Pagarle a LUMA | Energía Solar Puerto Rico</title>
     
-    <!-- NUEVAS FUENTES DE IMPACTO -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,11 +16,9 @@
             box-sizing: border-box;
         }
 
-        /* FUENTES PRINCIPALES */
         :root {
-            --font-display: 'Space Grotesk', sans-serif;  /* Títulos impacto */
-            --font-body: 'Inter', sans-serif;              /* Lectura fácil */
-            
+            --font-display: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
             --solar-orange: #ff6b35;
             --solar-yellow: #f7c948;
             --sky-blue: #0ea5e9;
@@ -38,14 +35,12 @@
             background: #fff;
         }
 
-        /* IMPACTO TIPOGRÁFICO */
         h1, h2, h3, .price-tag, .stat-number, .savings-amount {
             font-family: var(--font-display);
             font-weight: 700;
-            letter-spacing: -0.02em; /* Tight para impacto */
+            letter-spacing: -0.02em;
         }
 
-        /* Urgency Bar */
         .urgency-bar {
             background: linear-gradient(90deg, var(--solar-orange), #ff8c42);
             color: white;
@@ -61,7 +56,6 @@
             z-index: 100;
         }
 
-        /* Hero */
         .hero {
             background: linear-gradient(135deg, var(--deep-blue) 0%, var(--sky-blue) 50%, var(--solar-yellow) 100%);
             min-height: 90vh;
@@ -156,7 +150,6 @@
             box-shadow: 0 6px 25px rgba(37,211,102,0.6);
         }
 
-        /* Problem Section */
         .problem {
             padding: 5rem 2rem;
             background: var(--dark-bg);
@@ -165,12 +158,12 @@
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
         .section-title {
-            font-size: 3rem;
+            font-size: 2.8rem;
             margin-bottom: 1rem;
             text-transform: uppercase;
         }
@@ -190,13 +183,7 @@
             line-height: 1;
         }
 
-        .highlight-box p {
-            font-family: var(--font-body);
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
-        }
-
-        /* Comparison Section */
+        /* COMPARISON SECTION - 3 COLUMNAS */
         .comparison {
             padding: 5rem 2rem;
             background: white;
@@ -204,20 +191,27 @@
 
         .comparison-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
             margin-top: 2rem;
         }
 
         .comparison-card {
-            padding: 2.5rem;
+            padding: 2rem;
             border-radius: 15px;
             text-align: center;
+            display: flex;
+            flex-direction: column;
         }
 
         .luma-card {
             background: #fee2e2;
             border: 3px solid #dc2626;
+        }
+
+        .finance-card {
+            background: #fef3c7;
+            border: 3px solid #f59e0b;
         }
 
         .solar-card {
@@ -227,28 +221,78 @@
 
         .card-title {
             font-family: var(--font-display);
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 700;
             text-transform: uppercase;
             margin-bottom: 1rem;
         }
 
         .luma-card .card-title { color: #dc2626; }
+        .finance-card .card-title { color: #b45309; }
         .solar-card .card-title { color: #16a34a; }
 
         .price-tag {
-            font-size: 4rem;
-            margin: 1.5rem 0;
+            font-size: 3rem;
+            margin: 1rem 0;
             line-height: 1;
         }
 
         .luma-card .price-tag { color: #dc2626; }
+        .finance-card .price-tag { color: #b45309; }
         .solar-card .price-tag { color: #16a34a; }
+
+        .monthly-tag {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .comparison-card hr {
+            margin: 1rem 0;
+            border: none;
+            height: 2px;
+        }
+
+        .luma-card hr { background: #dc2626; }
+        .finance-card hr { background: #f59e0b; }
+        .solar-card hr { background: #16a34a; }
 
         .comparison-card p {
             font-family: var(--font-body);
             margin: 0.5rem 0;
+            font-size: 0.95rem;
         }
+
+        .feature-list {
+            text-align: left;
+            margin: 1rem 0;
+            flex-grow: 1;
+        }
+
+        .feature-list li {
+            list-style: none;
+            padding: 0.3rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.9rem;
+        }
+
+        .luma-card .feature-list li::before { content: '❌'; position: absolute; left: 0; color: #dc2626; }
+        .finance-card .feature-list li::before { content: '⚡'; position: absolute; left: 0; color: #f59e0b; }
+        .solar-card .feature-list li::before { content: '✅'; position: absolute; left: 0; color: #16a34a; }
+
+        .total-25 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: auto;
+            padding-top: 1rem;
+        }
+
+        .luma-card .total-25 { color: #dc2626; }
+        .finance-card .total-25 { color: #b45309; }
+        .solar-card .total-25 { color: #16a34a; }
 
         .savings-box {
             background: linear-gradient(135deg, var(--solar-orange), #ff8c42);
@@ -267,12 +311,11 @@
         }
 
         .savings-amount {
-            font-size: 5rem;
+            font-size: 4rem;
             line-height: 1;
             margin: 1rem 0;
         }
 
-        /* How It Works */
         .how-it-works {
             padding: 5rem 2rem;
             background: var(--light-bg);
@@ -319,7 +362,6 @@
             color: #64748b;
         }
 
-        /* Testimonial */
         .testimonial {
             padding: 5rem 2rem;
             background: var(--dark-bg);
@@ -344,7 +386,6 @@
             letter-spacing: 1px;
         }
 
-        /* Final CTA */
         .final-cta {
             padding: 5rem 2rem;
             background: linear-gradient(135deg, var(--deep-blue), var(--sky-blue));
@@ -390,7 +431,6 @@
             transform: scale(1.05);
         }
 
-        /* Footer */
         footer {
             background: var(--dark-bg);
             color: #94a3b8;
@@ -399,196 +439,207 @@
             font-family: var(--font-body);
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
+            .comparison-grid { grid-template-columns: 1fr; }
             .hero h1 { font-size: 2.5rem; }
             .hero h1 span { font-size: 3rem; }
-            .comparison-grid { grid-template-columns: 1fr; }
             .stat-number { font-size: 2.5rem; }
-            .big-number, .savings-amount { font-size: 3.5rem; }
+            .big-number, .savings-amount { font-size: 3rem; }
             .section-title { font-size: 2rem; }
+            .price-tag { font-size: 2.5rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Urgency Bar -->
     <div class="urgency-bar">
         ⚡ Oferta Especial: Evaluación Gratis Esta Semana ⚡
     </div>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <h1>Deja de Donarle Dinero a <span>LUMA Energy</span></h1>
             <p class="hero-subtitle">
-                Mientras pagas $120 mensuales que suben cada año, 
-                otros pusieron $23,000 una sola vez y ahora tienen luz gratis.
+                Tres caminos frente a ti. Solo uno te lleva a la libertad energética.
             </p>
             
             <div class="hero-stats">
                 <div class="stat-item">
                     <span class="stat-number">$50K+</span>
-                    <span class="stat-label">A LUMA en 25 años</span>
+                    <span class="stat-label">Con LUMA 25 años</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">$35K</span>
+                    <span class="stat-label">Financiado 15 años</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">$23K</span>
-                    <span class="stat-label">Un pago con solar</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">$27K</span>
-                    <span class="stat-label">Tu ahorro</span>
+                    <span class="stat-label">Cash una vez</span>
                 </div>
             </div>
 
-            <a href="https://wa.me/17879729553?text=Hola,%20quiero%20saber%20cuánto%20ahorraría%20con%20solar" class="cta-button whatsapp-btn">
-                💬 Hablar por WhatsApp
+            <a href="https://wa.me/1939XXXXXXX?text=Hola,%20quiero%20comparar%20mis%20opciones%20de%20pago" class="cta-button whatsapp-btn">
+                💬 Quiero la Mejor Opción para Mí
             </a>
-            <br>
-            <a href="#comparacion" class="cta-button">Ver los Números →</a>
         </div>
     </section>
 
-    <!-- Problem Section -->
     <section class="problem">
         <div class="container">
-            <h2 class="section-title">La Realidad de Tu Factura</h2>
+            <h2 class="section-title">Tu Factura de LUMA Hoy</h2>
             
             <div class="highlight-box">
                 <span class="big-number">$120</span>
-                <p>Hoy. Mañana será más.</p>
+                <p>Este mes. El próximo será más.</p>
             </div>
 
             <p style="font-size: 1.1rem; margin-top: 1.5rem;">
-                Con subidas de 5-8% cada año, en una década pagarás $200+ mensuales.<br>
+                Con subidas de 5-8% cada año, en 10 años pagarás $200+ mensuales.<br>
                 En 25 años, le habrás dado a LUMA más de <strong>$50,000</strong>.<br>
-                Y seguirás pagando.
+                Y seguirás pagando. Para siempre.
             </p>
         </div>
     </section>
 
-    <!-- Comparison Section -->
+    <!-- COMPARISON 3 COLUMNAS -->
     <section class="comparison" id="comparacion">
         <div class="container">
             <h2 class="section-title" style="text-align: center; color: var(--deep-blue);">
-                Comparación: 25 Años
+                Las 3 Opciones: 25 Años de Comparación
             </h2>
 
             <div class="comparison-grid">
+                <!-- OPCIÓN 1: LUMA -->
                 <div class="comparison-card luma-card">
                     <div class="card-title">🔴 Seguir con LUMA</div>
                     <div class="price-tag">$50,000+</div>
-                    <p>Pagados en 25 años</p>
-                    <hr style="margin: 1rem 0; border-color: #dc2626;">
-                    <p>❌ Precio sube cada año</p>
-                    <p>❌ Nunca terminas de pagar</p>
-                    <p>❌ Apagones incluidos</p>
+                    <div class="monthly-tag">$120 y subiendo</div>
+                    <hr>
+                    <ul class="feature-list">
+                        <li>Precio sube 5-8% cada año</li>
+                        <li>Nunca terminas de pagar</li>
+                        <li>Dependes de la red</li>
+                        <li>Apagones incluidos</li>
+                        <li>Sin batería de respaldo</li>
+                    </ul>
+                    <div class="total-25">$50,000+</div>
+                    <p style="font-size: 0.8rem;">Y sigues pagando después</p>
                 </div>
 
+                <!-- OPCIÓN 2: FINANCIADO -->
+                <div class="comparison-card finance-card">
+                    <div class="card-title">🟡 Solar Financiado</div>
+                    <div class="price-tag">$35,100</div>
+                    <div class="monthly-tag">$195 × 15 años</div>
+                    <hr>
+                    <ul class="feature-list">
+                        <li>Pago fijo, no sube</li>
+                        <li>Sin desembolso grande</li>
+                        <li>Batería 16kWh incluida</li>
+                        <li>Libre en año 16</li>
+                        <li>Años 16-25: $0 + ahorros</li>
+                    </ul>
+                    <div class="total-25">$35,100</div>
+                    <p style="font-size: 0.8rem;">Ahorro vs LUMA: $15,000+</p>
+                </div>
+
+                <!-- OPCIÓN 3: CASH -->
                 <div class="comparison-card solar-card">
                     <div class="card-title">🟢 Solar Cash</div>
                     <div class="price-tag">$23,000</div>
-                    <p>Una sola vez</p>
-                    <hr style="margin: 1rem 0; border-color: #16a34a;">
-                    <p>✅ Recuperas en 16 años</p>
-                    <p>✅ Años 17-25: $10,800 ganado</p>
-                    <p>✅ Luego $0 para siempre</p>
+                    <div class="monthly-tag">Un pago único</div>
+                    <hr>
+                    <ul class="feature-list">
+                        <li>Precio fijo para siempre</li>
+                        <li>Recuperas en 16 años</li>
+                        <li>Batería 16kWh incluida</li>
+                        <li>Años 17-25: $10,800 ganado</li>
+                        <li>Libertad total inmediata</li>
+                    </ul>
+                    <div class="total-25">$23,000</div>
+                    <p style="font-size: 0.8rem;">Ahorro vs LUMA: $27,000+</p>
                 </div>
             </div>
 
             <div class="savings-box">
-                <p>Ahorro Total en 25 Años</p>
+                <p>Mejor Opción: Solar Cash</p>
                 <div class="savings-amount">$27,000+</div>
                 <p style="margin-top: 1rem;">
-                    Más tranquilidad de precio fijo.<br>
-                    Sin sorpresas. Sin subidas.
+                    De ahorro en 25 años vs seguir con LUMA.<br>
+                    Pero si no tienes los $23,000, financiado sigue ahorrándote $15,000.
                 </p>
             </div>
 
             <div style="text-align: center; margin-top: 2rem;">
-                <a href="https://wa.me/1939XXXXXXX?text=Hola,%20quiero%20mi%20análisis%20personalizado" class="cta-button whatsapp-btn">
-                    💬 Quiero Mi Análisis Gratis
+                <a href="https://wa.me/17879729553?text=Hola,%20quiero%20saber%20cuál%20opción%20me%20conviene%20más" class="cta-button whatsapp-btn">
+                    💬 Ayúdame a Elegir la Mejor Opción
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- How It Works -->
     <section class="how-it-works">
         <div class="container">
             <h2 class="section-title" style="text-align: center; color: var(--deep-blue);">
-                Cómo Funciona
+                Cómo Funciona Cada Opción
             </h2>
 
             <div class="steps">
                 <div class="step">
                     <div class="step-number">1</div>
-                    <h3>Pagas $23,000</h3>
-                    <p>Una vez. Sistema completo: paneles + batería 16kWh + todo incluido.</p>
+                    <h3>LUMA</h3>
+                    <p>Pagas $120 que suben cada mes. Para siempre. Nunca es tuyo.</p>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h3>Ahorras $120/mes</h3>
-                    <p>Dejas de pagarle a LUMA. Tu luz sale de tu techo.</p>
+                    <h3>Financiado</h3>
+                    <p>$195 fijos por 15 años. Luego $0. Funciona si no tienes el cash.</p>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">3</div>
-                    <h3>Recuperas en 16 Años</h3>
-                    <p>$120 × 12 × 16 = $23,040. Tu inversión de vuelta.</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>Ganas $10,800+</h3>
-                    <p>Años 17-25: $0 factura. Eso es ganancia pura.</p>
+                    <h3>Cash</h3>
+                    <p>$23,000 una vez. Recuperas en 16 años. Luego ganas $10,800+.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonial -->
     <section class="testimonial">
         <div class="container">
             <p class="testimonial-text">
-                "Pagué $23,000 cash hace 6 años. Ya recuperé mi inversión. 
-                Ahora cada mes es dinero ganado. Mi vecino sigue pagando $150+ a LUMA 
-                y subiendo. Yo pago $0."
+                "Dudé entre financiado y cash. No tenía los $23,000, pero saqué un préstamo al 8% y igual salí ganando. 
+                Año 8 ya voy recuperado. Mi vecino sigue pagando $180 a LUMA y subiendo."
             </p>
-            <p class="testimonial-author">— Carlos M., Bayamón</p>
-            <p style="opacity: 0.8; margin-top: 0.5rem;">Recuperó inversión en año 16. Ahora gana $120/mes.</p>
+            <p class="testimonial-author">— María R., Guaynabo</p>
+            <p style="opacity: 0.8;">Optó por financiamiento, pero refinanció a cash en año 3.</p>
         </div>
     </section>
 
-    <!-- Final CTA -->
     <section class="final-cta">
         <div class="container">
-            <h2>¿Sigues Dudando?</h2>
+            <h2>¿Cuál Es Tu Situación?</h2>
             <p>
-                Cada mes que esperas es $120 que donas a LUMA.<br>
-                En un año: $1,440. En 5 años: $7,200 perdidos.
-            </p>
-            <p>
-                Opción A: Seguir pagando $120 que suben.<br>
-                Opción B: Poner $23,000 una vez y liberarte.
+                <strong>Tienes $23,000 disponibles:</strong> Cash es tu mejor inversión. $27,000 de ahorro.<br><br>
+                <strong>No tienes el cash:</strong> Financiado sigue ahorrándote $15,000+ vs LUMA.<br><br>
+                <strong>Sigues con LUMA:</strong> Pierdes $50,000+ en 25 años. Y contando.
             </p>
 
-            <a href="https://wa.me/17879729553?text=Hola,%20estoy%20listo%20para%20dejar%20de%20pagarle%20a%20LUMA" class="whatsapp-big">
+            <a href="https://wa.me/17879729553?text=Hola,%20quiero%20evaluar%20mis%20opciones%20de%20pago" class="whatsapp-big">
                 <span>💬</span>
-                <span>Quiero Mi Independencia</span>
+                <span>Quiero Mi Evaluación Personalizada</span>
             </a>
 
             <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
-                Evaluación gratis • Sin compromiso • Respuesta en 1 hora
+                Análisis gratis • Sin compromiso • Respuesta en 1 hora
             </p>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">🇵🇷 Energía Solar Puerto Rico</p>
-        <p>Libertad energética es posible. Los números no mienten.</p>
+        <p>Cash, financiado o LUMA: los números no mienten.</p>
     </footer>
 
 </body>
