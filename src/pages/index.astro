@@ -866,12 +866,44 @@
 
     </section>
 
-    <footer>
+  <footer>
         <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">☀️ Rafael Santiago - Pura Energía</p>
         <p>Aprovecha el sol de Puerto Rico. Es tuyo, úsalo.</p>
-        <p>Pagos Mensuales y Ahorros podrían variar de menor a mayor dependiendo de su  oferta de crédito.</p>
-</span>
+        
+        <!-- BOTÓN PPA PARA ASTRO -->
+        <a href="/ppa" target="_blank" rel="noopener noreferrer" class="ppa-footer-btn">
+            🔋 Ver Programa PPA de Sunrun (Sin Inversión Inicial)
+        </a>
+        
+        <p style="margin-top: 1rem; font-size: 0.85rem; color: #64748b;">
+            Pagos Mensuales y Ahorros podrían variar de menor a mayor dependiendo de su oferta de crédito.
+        </p>
     </footer>
+
+    <style>
+    /* ESTILO BOTÓN PPA EN FOOTER */
+    .ppa-footer-btn {
+        display: inline-block;
+        background: linear-gradient(135deg, #F97316, #EA580C);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 0.95rem;
+        margin: 1rem 0;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(249,115,22,0.3);
+    }
+
+    .ppa-footer-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(249,115,22,0.4);
+        background: linear-gradient(135deg, #EA580C, #C2410C);
+    }
+    </style>
+
 
 </body>
 </html>
