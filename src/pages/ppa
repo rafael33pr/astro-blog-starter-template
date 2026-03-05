@@ -1,0 +1,630 @@
+<!-- SECCIÓN PPA SUNRUN - Datos Corregidos -->
+<section class="sunrun-ppa" id="ppa-sunrun">
+    <div class="sunrun-container">
+        <!-- Header -->
+        <div class="sunrun-header">
+            <div class="sunrun-badge">Sin Inversión Inicial</div>
+            <div class="sunrun-branding">
+                <span class="sunrun-logo-text">sunrun</span>
+                <span class="sunrun-trademark">®</span>
+            </div>
+            <h2 class="sunrun-title">Cambia de LUMA sin Comprar Paneles</h2>
+            <p class="sunrun-lead">El programa PPA de Sunrun te da energía solar limpia con precio fijo garantizado por 15 años. Nosotros instalamos, tú ahorras.</p>
+        </div>
+
+        <!-- Grid principal -->
+        <div class="ppa-grid">
+            <!-- Izquierda: Cómo funciona -->
+            <div class="ppa-explanation">
+                <div class="explanation-card">
+                    <h3>¿Cómo Funciona el PPA?</h3>
+                    <div class="step-flow">
+                        <div class="flow-step">
+                            <span class="step-num">1</span>
+                            <div class="step-content">
+                                <h4>Evaluación Gratis</h4>
+                                <p>Verificamos que tu techo califique</p>
+                            </div>
+                        </div>
+                        <div class="flow-connector"></div>
+                        <div class="flow-step">
+                            <span class="step-num">2</span>
+                            <div class="step-content">
+                                <h4>Instalación Sin Costo</h4>
+                                <p>Sunrun pone paneles, inversor, todo</p>
+                            </div>
+                        </div>
+                        <div class="flow-connector"></div>
+                        <div class="flow-step">
+                            <span class="step-num">3</span>
+                            <div class="step-content">
+                                <h4>Pagas la Luz que Usas</h4>
+                                <p>Precio fijo más bajo que LUMA</p>
+                            </div>
+                        </div>
+                        <div class="flow-connector"></div>
+                        <div class="flow-step highlight">
+                            <span class="step-num">✓</span>
+                            <div class="step-content">
+                                <h4>Nosotros Cuidamos Todo</h4>
+                                <p>Mantenimiento, monitoreo, garantía 15 años</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ventajas -->
+                <div class="advantages-grid">
+                    <div class="adv-item">
+                        <span class="adv-check">✓</span>
+                        <div>
+                            <h5>$0 Inversión</h5>
+                            <p>Cero el día 1</p>
+                        </div>
+                    </div>
+                    <div class="adv-item">
+                        <span class="adv-check">✓</span>
+                        <div>
+                            <h5>Precio Fijo 15 Años</h5>
+                            <p>Sin subidas sorpresa</p>
+                        </div>
+                    </div>
+                    <div class="adv-item">
+                        <span class="adv-check">✓</span>
+                        <div>
+                            <h5>Mantenimiento Total</h5>
+                            <p>Sin costo extra</p>
+                        </div>
+                    </div>
+                    <div class="adv-item">
+                        <span class="adv-check">✓</span>
+                        <div>
+                            <h5>Transferible</h5>
+                            <p>Si te mudas, te lo llevas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Derecha: Comparación -->
+            <div class="ppa-comparison">
+                <h3>Tu Factura: Ahora vs Con Sunrun</h3>
+                
+                <div class="comparison-cards">
+                    <div class="comp-card luma-card">
+                        <div class="comp-header">
+                            <span class="comp-brand">LUMA Energy</span>
+                            <span class="comp-status rising">Sube cada año</span>
+                        </div>
+                        <div class="comp-price">
+                            <span class="dollar">$</span>
+                            <span class="amount">120</span>
+                            <span class="month">/mes hoy</span>
+                        </div>
+                        <div class="comp-future">
+                            <span>En 5 años: ~$155</span>
+                            <span>En 10 años: ~$200</span>
+                            <span>En 15 años: ~$250+</span>
+                        </div>
+                    </div>
+
+                    <div class="vs-circle">VS</div>
+
+                    <div class="comp-card sunrun-card">
+                        <div class="comp-header">
+                            <span class="comp-brand">Sunrun PPA</span>
+                            <span class="comp-status fixed">Precio fijo 15 años</span>
+                        </div>
+                        <div class="comp-price">
+                            <span class="dollar">$</span>
+                            <span class="amount">--</span>
+                            <span class="month">/mes fijo</span>
+                        </div>
+                        <div class="comp-future sunrun-future">
+                            <span>Año 5: Precio fijo</span>
+                            <span>Año 10: Precio fijo</span>
+                            <span>Año 15: Precio fijo ✓</span>
+                        </div>
+                        <div class="contract-note">
+                            <span>Contrato 15 años. Luego opción a renovar o comprar.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="savings-box">
+                    <div class="savings-left">
+                        <span class="savings-label">Ahorro mensual</span>
+                        <span class="savings-amount">Variable</span>
+                    </div>
+                    <div class="savings-right">
+                        <span class="savings-label">Protección 15 años</span>
+                        <span class="savings-total">Sin subidas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="sunrun-cta">
+            <p class="cta-headline">¿Quieres salir de LUMA sin invertir?</p>
+            <p class="cta-sub">Verifica si tu casa califica para el programa PPA de Sunrun. Precio fijo garantizado por 15 años.</p>
+            <a href="https://wa.me/17879729553?text=Hola%20Rafael,%20quiero%20saber%20si%20califico%20para%20el%20PPA%20de%20Sunrun%20a%2015%20años" class="sunrun-button">
+                <span>💬</span>
+                <span>Consultar Elegibilidad Gratis</span>
+            </a>
+            <p class="cta-note">Respuesta en 24 horas • Sin compromiso</p>
+        </div>
+    </div>
+</section>
+
+<style>
+/* ESTILOS PPA SUNRUN - Datos Corregidos */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --sunrun-red: #E31837;
+    --sunrun-red-dark: #B9132B;
+    --sunrun-blue: #003366;
+    --sunrun-blue-light: #004080;
+    --sunrun-gray: #6B7280;
+}
+
+.sunrun-ppa {
+    padding: 5rem 2rem;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    font-family: 'Inter', sans-serif;
+    border-top: 4px solid var(--sunrun-red);
+}
+
+.sunrun-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Header */
+.sunrun-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.sunrun-badge {
+    display: inline-block;
+    background: var(--sunrun-red);
+    color: white;
+    padding: 0.4rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.5rem;
+}
+
+.sunrun-branding {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.sunrun-logo-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--sunrun-blue);
+    letter-spacing: -2px;
+    text-transform: lowercase;
+}
+
+.sunrun-trademark {
+    font-size: 1rem;
+    color: var(--sunrun-blue);
+    margin-left: 0.2rem;
+    margin-top: 0.5rem;
+}
+
+.sunrun-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #1f2937;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.sunrun-lead {
+    font-size: 1.15rem;
+    color: var(--sunrun-gray);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+/* Grid */
+.ppa-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* Explicación */
+.explanation-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.explanation-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--sunrun-blue);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.step-flow {
+    display: flex;
+    flex-direction: column;
+}
+
+.flow-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.step-num {
+    width: 28px;
+    height: 28px;
+    background: var(--sunrun-blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.flow-step.highlight .step-num {
+    background: var(--sunrun-red);
+}
+
+.step-content h4 {
+    font-size: 1rem;
+    color: #1f2937;
+    margin-bottom: 0.2rem;
+    font-weight: 600;
+}
+
+.step-content p {
+    font-size: 0.9rem;
+    color: var(--sunrun-gray);
+    margin: 0;
+}
+
+.flow-connector {
+    width: 2px;
+    height: 20px;
+    background: #e5e7eb;
+    margin-left: 13px;
+}
+
+/* Ventajas grid */
+.advantages-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.adv-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.adv-check {
+    width: 22px;
+    height: 22px;
+    background: var(--sunrun-red);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+}
+
+.adv-item h5 {
+    font-size: 0.95rem;
+    color: #1f2937;
+    margin-bottom: 0.1rem;
+    font-weight: 600;
+}
+
+.adv-item p {
+    font-size: 0.85rem;
+    color: var(--sunrun-gray);
+    margin: 0;
+}
+
+/* Comparación */
+.ppa-comparison {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.ppa-comparison h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--sunrun-blue);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.comparison-cards {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.comp-card {
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.luma-card {
+    background: #fef2f2;
+    border: 2px solid #fecaca;
+}
+
+.sunrun-card {
+    background: #eff6ff;
+    border: 2px solid #bfdbfe;
+}
+
+.comp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.comp-brand {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.luma-card .comp-brand { color: #991b1b; }
+.sunrun-card .comp-brand { color: var(--sunrun-blue); }
+
+.comp-status {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.rising {
+    background: #fecaca;
+    color: #991b1b;
+}
+
+.fixed {
+    background: #bfdbfe;
+    color: var(--sunrun-blue);
+}
+
+.comp-price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.dollar {
+    font-size: 1.5rem;
+    color: #9ca3af;
+}
+
+.amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.luma-card .amount { color: #991b1b; }
+.sunrun-card .amount { color: var(--sunrun-blue); }
+
+.month {
+    font-size: 0.9rem;
+    color: #9ca3af;
+    margin-left: 0.3rem;
+}
+
+.comp-future {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.comp-future span {
+    font-size: 0.85rem;
+    color: #991b1b;
+}
+
+.sunrun-future span {
+    color: var(--sunrun-blue);
+}
+
+.contract-note {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #bfdbfe;
+}
+
+.contract-note span {
+    font-size: 0.85rem;
+    color: var(--sunrun-blue);
+    font-style: italic;
+}
+
+.vs-circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--sunrun-gray);
+    z-index: 2;
+}
+
+/* Savings box */
+.savings-box {
+    display: flex;
+    background: linear-gradient(135deg, var(--sunrun-red), var(--sunrun-red-dark));
+    border-radius: 12px;
+    padding: 1.5rem;
+    color: white;
+}
+
+.savings-left, .savings-right {
+    flex: 1;
+    text-align: center;
+}
+
+.savings-left {
+    border-right: 1px solid rgba(255,255,255,0.3);
+}
+
+.savings-label {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    margin-bottom: 0.3rem;
+}
+
+.savings-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.savings-total {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* CTA */
+.sunrun-cta {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.cta-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.cta-sub {
+    font-size: 1.05rem;
+    color: var(--sunrun-gray);
+    margin-bottom: 1.5rem;
+}
+
+.sunrun-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: var(--sunrun-red);
+    color: white;
+    padding: 1.1rem 2.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s;
+    box-shadow: 0 4px 14px rgba(227,24,55,0.3);
+}
+
+.sunrun-button:hover {
+    background: var(--sunrun-red-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(227,24,55,0.4);
+}
+
+.cta-note {
+    font-size: 0.85rem;
+    color: var(--sunrun-gray);
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .ppa-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .advantages-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sunrun-logo-text {
+        font-size: 2.5rem;
+    }
+    
+    .sunrun-title {
+        font-size: 1.6rem;
+    }
+    
+    .vs-circle {
+        display: none;
+    }
+    
+    .savings-box {
+        flex-direction: column;
+    }
+    
+    .savings-left {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.3);
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+</style>
