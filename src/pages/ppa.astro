@@ -1,5 +1,6 @@
 <!-- SECCIÓN PPA SUNRUN - Datos Corregidos -->
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 <!-- EMBUDO PPA SUNRUN + BATERÍA - Fuente Montserrat -->
 <section class="sunrun-funnel" id="ppa-sunrun">
     
@@ -259,10 +260,24 @@
 </section>
 
 <style>
-/* FUENTE MONTSERRAT */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+* {
+    box-sizing: border-box;
+}
 
-/* COLORES PURA ENERGÍA PR */
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* FUENTES RESPONSIVAS - Base para móvil */
 .sunrun-funnel {
     --pe-yellow: #FBBF24;
     --pe-orange: #F97316;
@@ -272,66 +287,71 @@
     --pe-cream: #FEF3C7;
     --pe-light: #FFFBEB;
     
-    font-family: 'Montserrat', sans-serif;
-    color: #1a1a1a;
+    font-size: clamp(14px, 4vw, 18px);
     line-height: 1.6;
 }
 
+/* CONTENEDOR FULL WIDTH EN MÓVIL */
 .sunrun-funnel .container {
-    max-width: 800px;
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 4vw;
 }
 
-/* SECCIÓN 1: PROBLEMA */
+/* ========== SECCIÓN 1: PROBLEMA ========== */
 .problem-section {
     background: linear-gradient(135deg, var(--pe-orange-dark) 0%, var(--pe-orange) 100%);
     color: white;
-    padding: 4rem 0;
+    padding: 8vw 0;
     text-align: center;
+    width: 100%;
 }
 
 .eyebrow {
     display: inline-block;
     background: rgba(255,255,255,0.2);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.75rem;
+    padding: 2vw 4vw;
+    border-radius: 50px;
+    font-size: clamp(0.7rem, 3vw, 0.9rem);
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 4vw;
 }
 
 .problem-section h2 {
-    font-size: 2.2rem;
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
     font-weight: 800;
-    margin-bottom: 1rem;
+    margin-bottom: 3vw;
     line-height: 1.2;
+    padding: 0 2vw;
 }
 
 .problem-section .lead {
-    font-size: 1.15rem;
+    font-size: clamp(1rem, 4.5vw, 1.3rem);
     font-weight: 500;
     opacity: 0.95;
-    max-width: 600px;
-    margin: 0 auto 2rem;
+    max-width: 90%;
+    margin: 0 auto 4vw;
+    line-height: 1.5;
 }
 
 .scroll-hint {
-    margin-top: 2rem;
+    margin-top: 4vw;
     opacity: 0.8;
-    font-size: 0.85rem;
-    font-weight: 500;
+    font-size: clamp(0.8rem, 3vw, 1rem);
 }
 
 .bounce-arrow {
-    width: 20px;
-    height: 20px;
-    border-right: 2px solid white;
-    border-bottom: 2px solid white;
+    width: 5vw;
+    height: 5vw;
+    max-width: 25px;
+    max-height: 25px;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
     transform: rotate(45deg);
-    margin: 10px auto 0;
+    margin: 3vw auto 0;
     animation: bounce 2s infinite;
 }
 
@@ -341,23 +361,24 @@
     60% { transform: translateY(-5px) rotate(45deg); }
 }
 
-/* SECCIÓN 2: SOLUCIÓN */
+/* ========== SECCIÓN 2: SOLUCIÓN ========== */
 .solution-section {
     background: var(--pe-cream);
-    padding: 4rem 0;
+    padding: 8vw 0;
     text-align: center;
+    width: 100%;
 }
 
 .sunrun-brand {
-    margin-bottom: 2rem;
+    margin-bottom: 5vw;
 }
 
 .powered {
     display: block;
-    font-size: 0.8rem;
+    font-size: clamp(0.7rem, 2.5vw, 0.85rem);
     font-weight: 500;
     color: var(--pe-orange-dark);
-    margin-bottom: 0.5rem;
+    margin-bottom: 2vw;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -365,83 +386,86 @@
 .sunrun-logo-link {
     display: inline-flex;
     align-items: center;
-    gap: 0.3rem;
+    gap: 1vw;
     text-decoration: none;
     color: var(--pe-blue);
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 8vw, 3rem);
     font-weight: 800;
     letter-spacing: -2px;
 }
 
 .external {
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 3vw, 1rem);
     color: var(--pe-orange);
     font-weight: 600;
 }
 
 .verified {
     display: block;
-    font-size: 0.75rem;
+    font-size: clamp(0.7rem, 2.5vw, 0.8rem);
     color: #16A34A;
-    margin-top: 0.5rem;
+    margin-top: 2vw;
     font-weight: 600;
 }
 
 .solution-section h3 {
-    font-size: 1.6rem;
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
     color: var(--pe-dark);
-    margin-bottom: 1.5rem;
+    margin-bottom: 5vw;
     font-weight: 700;
+    padding: 0 3vw;
 }
 
 /* BATERÍA DESTACADA */
 .battery-highlight {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 3vw;
     background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
+    padding: 4vw;
+    border-radius: 3vw;
     border-left: 4px solid var(--pe-orange);
-    max-width: 600px;
-    margin: 0 auto 2rem;
+    margin: 0 2vw 5vw;
     text-align: left;
 }
 
 .battery-icon {
-    font-size: 3rem;
+    font-size: clamp(2rem, 10vw, 4rem);
+    flex-shrink: 0;
 }
 
 .battery-text strong {
     display: block;
     color: var(--pe-orange-dark);
-    margin-bottom: 0.3rem;
+    margin-bottom: 1vw;
     font-weight: 700;
+    font-size: clamp(0.95rem, 4vw, 1.1rem);
 }
 
 .battery-text p {
     color: var(--pe-dark);
     margin: 0;
-    font-size: 0.9rem;
+    font-size: clamp(0.85rem, 3.5vw, 1rem);
     font-weight: 500;
+    line-height: 1.5;
 }
 
 /* PASOS */
 .how-it-works-simple {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
+    flex-direction: column;
+    gap: 4vw;
+    margin-bottom: 5vw;
 }
 
 .simple-step {
     background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    width: 200px;
+    padding: 5vw;
+    border-radius: 3vw;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
     border: 2px solid transparent;
 }
 
@@ -451,40 +475,41 @@
 }
 
 .simple-step .icon {
-    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 12vw, 4rem);
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 2vw;
 }
 
 .simple-step p {
     font-weight: 700;
     color: var(--pe-dark);
-    margin-bottom: 0.3rem;
-    font-size: 0.95rem;
+    margin-bottom: 1vw;
+    font-size: clamp(1.1rem, 5vw, 1.3rem);
 }
 
 .simple-step .detail {
-    font-size: 0.8rem;
+    font-size: clamp(0.9rem, 4vw, 1.1rem);
     color: var(--pe-orange-dark);
     font-weight: 600;
 }
 
 .arrow {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
     color: var(--pe-orange);
     font-weight: 700;
+    transform: rotate(90deg);
 }
 
 .key-difference {
     background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
+    padding: 4vw;
+    border-radius: 3vw;
     border-left: 4px solid var(--pe-orange);
     text-align: left;
-    font-size: 1.05rem;
-    max-width: 600px;
-    margin: 0 auto;
+    font-size: clamp(0.95rem, 4vw, 1.15rem);
+    margin: 0 2vw;
     font-weight: 500;
+    line-height: 1.6;
 }
 
 .key-difference strong {
@@ -492,42 +517,43 @@
     font-weight: 700;
 }
 
-/* SECCIÓN 3: COMPARACIÓN */
+/* ========== SECCIÓN 3: COMPARACIÓN ========== */
 .comparison-section {
     background: white;
-    padding: 4rem 0;
+    padding: 8vw 0;
+    width: 100%;
 }
 
 .comparison-section h3 {
     text-align: center;
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
+    font-size: clamp(1.3rem, 5.5vw, 1.8rem);
+    margin-bottom: 5vw;
     color: var(--pe-dark);
     font-weight: 700;
+    padding: 0 3vw;
 }
 
 .math-showdown {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: 1.5rem;
-    align-items: start;
-    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
 }
 
 .math-card {
     background: white;
-    border-radius: 16px;
+    border-radius: 4vw;
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    margin: 0 2vw;
 }
 
 .math-header {
-    padding: 1rem 1.5rem;
+    padding: 3vw 4vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-weight: 700;
-    font-size: 0.95rem;
+    font-size: clamp(0.9rem, 4vw, 1.1rem);
 }
 
 .luma-math .math-header {
@@ -541,24 +567,25 @@
 }
 
 .trend {
-    font-size: 0.7rem;
-    padding: 0.3rem 0.8rem;
+    font-size: clamp(0.65rem, 2.5vw, 0.8rem);
+    padding: 1.5vw 3vw;
     border-radius: 12px;
     background: rgba(255,255,255,0.5);
     font-weight: 600;
 }
 
 .math-body {
-    padding: 1.5rem;
+    padding: 4vw;
 }
 
 .feature-row {
     display: flex;
-    gap: 0.8rem;
-    padding: 0.8rem 0;
+    gap: 2vw;
+    padding: 3vw 0;
     border-bottom: 1px solid #E5E7EB;
-    font-size: 0.9rem;
+    font-size: clamp(0.95rem, 4vw, 1.1rem);
     font-weight: 500;
+    align-items: center;
 }
 
 .feature-row:last-child {
@@ -579,13 +606,14 @@
 }
 
 .year-highlight {
-    padding: 1rem 1.5rem;
+    padding: 3vw 4vw;
     background: #F9FAFB;
     display: flex;
     justify-content: space-between;
     font-weight: 600;
     border-top: 2px solid #E5E7EB;
-    font-size: 0.95rem;
+    font-size: clamp(0.95rem, 4vw, 1.1rem);
+    align-items: center;
 }
 
 .year-highlight.good {
@@ -599,7 +627,7 @@
 
 .year-highlight .price.bad {
     color: #DC2626;
-    font-size: 1.1rem;
+    font-size: clamp(1.1rem, 5vw, 1.3rem);
 }
 
 .year-highlight .price.good {
@@ -607,220 +635,232 @@
 }
 
 .math-total {
-    padding: 1rem 1.5rem;
+    padding: 3vw 4vw;
     background: #F3F4F6;
     display: flex;
     justify-content: space-between;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: clamp(1rem, 4.5vw, 1.2rem);
+    align-items: center;
 }
 
 .amount.bad {
     color: #DC2626;
-    font-size: 1.2rem;
+    font-size: clamp(1.2rem, 6vw, 1.5rem);
     font-weight: 800;
 }
 
 .amount.good {
     color: var(--pe-orange-dark);
-    font-size: 1.2rem;
+    font-size: clamp(1.2rem, 6vw, 1.5rem);
     font-weight: 800;
 }
 
 .you-have {
-    padding: 1rem 1.5rem;
+    padding: 3vw 4vw;
     background: white;
     text-align: center;
-    font-size: 0.85rem;
+    font-size: clamp(0.85rem, 3.5vw, 1rem);
 }
 
 .you-have span:first-child {
     display: block;
     color: #6B7280;
-    margin-bottom: 0.3rem;
+    margin-bottom: 1vw;
     font-weight: 500;
 }
 
 .nothing {
     color: #DC2626;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: clamp(1rem, 4.5vw, 1.2rem);
 }
 
 .you-have.good .options {
     color: var(--pe-orange-dark);
     font-weight: 700;
-    font-size: 1rem;
+    font-size: clamp(1rem, 4.5vw, 1.2rem);
 }
 
 .vs-center {
     text-align: center;
-    align-self: center;
+    padding: 2vw 0;
 }
 
 .vs-text {
     display: block;
-    font-size: 1.5rem;
+    font-size: clamp(1.3rem, 6vw, 1.8rem);
     font-weight: 800;
     color: #9CA3AF;
-    margin-bottom: 1rem;
+    margin-bottom: 2vw;
 }
 
 .savings-tag {
     background: var(--pe-orange);
     color: white;
-    padding: 1rem;
-    border-radius: 12px;
+    padding: 3vw 5vw;
+    border-radius: 3vw;
     font-weight: 700;
-    font-size: 0.85rem;
+    font-size: clamp(0.85rem, 3.5vw, 1rem);
+    display: inline-block;
 }
 
 .boricua-hook {
     text-align: center;
-    font-size: 1.15rem;
+    font-size: clamp(1.05rem, 4.5vw, 1.3rem);
     color: var(--pe-orange-dark);
     font-style: italic;
-    max-width: 600px;
-    margin: 0 auto;
+    margin: 5vw 3vw 0;
     font-weight: 500;
+    line-height: 1.5;
 }
 
-/* SECCIÓN 4: BATERÍA DETALLE */
+/* ========== SECCIÓN 4: BATERÍA DETALLE ========== */
 .battery-section {
     background: var(--pe-light);
-    padding: 4rem 0;
+    padding: 8vw 0;
+    width: 100%;
 }
 
 .battery-section h3 {
     text-align: center;
-    font-size: 1.8rem;
+    font-size: clamp(1.3rem, 5.5vw, 1.8rem);
     color: var(--pe-dark);
-    margin-bottom: 2rem;
+    margin-bottom: 5vw;
     font-weight: 700;
+    padding: 0 3vw;
 }
 
 .battery-scenarios {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+    margin-bottom: 5vw;
 }
 
 .scenario {
     background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    padding: 5vw;
+    border-radius: 3vw;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    margin: 0 3vw;
 }
 
 .scenario-time {
-    font-size: 1.2rem;
+    font-size: clamp(1.2rem, 5.5vw, 1.5rem);
     font-weight: 700;
     color: var(--pe-orange-dark);
-    margin-bottom: 0.5rem;
+    margin-bottom: 2vw;
 }
 
 .scenario p {
     color: #6B7280;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
+    font-size: clamp(0.95rem, 4vw, 1.1rem);
+    margin-bottom: 2vw;
     font-weight: 500;
+    line-height: 1.5;
 }
 
 .with-battery {
     color: var(--pe-dark) !important;
     font-weight: 600 !important;
+    font-size: clamp(1rem, 4.5vw, 1.15rem) !important;
 }
 
 .battery-included-box {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 3vw;
     background: linear-gradient(135deg, var(--pe-orange), var(--pe-orange-dark));
     color: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    max-width: 600px;
-    margin: 0 auto;
+    padding: 5vw;
+    border-radius: 3vw;
+    margin: 0 3vw;
 }
 
 .check-big {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 10vw, 3.5rem);
     font-weight: 700;
+    flex-shrink: 0;
 }
 
 .battery-included-box strong {
     display: block;
-    margin-bottom: 0.3rem;
+    margin-bottom: 1vw;
     font-weight: 700;
+    font-size: clamp(1rem, 4.5vw, 1.2rem);
 }
 
 .battery-included-box p {
     margin: 0;
-    font-size: 0.85rem;
+    font-size: clamp(0.85rem, 3.5vw, 1rem);
     opacity: 0.95;
     font-weight: 500;
+    line-height: 1.5;
 }
 
-/* SECCIÓN 5: $0 INVERSIÓN */
+/* ========== SECCIÓN 5: $0 INVERSIÓN ========== */
 .objection-section {
     background: white;
-    padding: 4rem 0;
+    padding: 8vw 0;
     text-align: center;
+    width: 100%;
 }
 
 .objection-section h3 {
-    font-size: 1.4rem;
-    margin-bottom: 2rem;
+    font-size: clamp(1.15rem, 5vw, 1.5rem);
+    margin-bottom: 5vw;
     color: var(--pe-dark);
-    max-width: 600px;
+    max-width: 90%;
     margin-left: auto;
     margin-right: auto;
     font-weight: 700;
+    line-height: 1.4;
 }
 
 .zero-investment {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3vw;
+    margin: 0 3vw 5vw;
 }
 
 .zero-item {
     background: var(--pe-light);
-    padding: 1.5rem;
-    border-radius: 12px;
-    width: 160px;
+    padding: 4vw;
+    border-radius: 3vw;
     border: 2px solid transparent;
 }
 
 .zero-item.highlight {
     border-color: var(--pe-orange);
     background: white;
-    box-shadow: 0 4px 12px rgba(249,115,22,0.2);
+    box-shadow: 0 4px 20px rgba(249,115,22,0.2);
 }
 
 .zero-x {
     display: block;
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 10vw, 3rem);
     font-weight: 800;
     color: var(--pe-orange-dark);
-    margin-bottom: 0.3rem;
+    margin-bottom: 1vw;
 }
 
 .zero-label {
-    font-size: 0.85rem;
+    font-size: clamp(0.8rem, 3.5vw, 0.95rem);
     color: var(--pe-dark);
     font-weight: 600;
+    line-height: 1.3;
 }
 
 .sunrun-promise {
-    font-size: 1.05rem;
-    max-width: 600px;
+    font-size: clamp(1rem, 4.5vw, 1.2rem);
+    max-width: 90%;
     margin: 0 auto;
     color: var(--pe-dark);
     font-weight: 500;
+    line-height: 1.6;
+    padding: 0 3vw;
 }
 
 .sunrun-promise strong {
@@ -828,39 +868,45 @@
     font-weight: 700;
 }
 
-/* SECCIÓN 6: URGENCIA */
+/* ========== SECCIÓN 6: URGENCIA ========== */
 .urgency-section {
     background: var(--pe-dark);
     color: white;
-    padding: 4rem 0;
+    padding: 8vw 0;
+    width: 100%;
 }
 
 .pr-alert {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 3vw;
     background: rgba(251,191,36,0.2);
-    padding: 1.5rem;
-    border-radius: 12px;
-    margin-bottom: 2rem;
-    border: 1px solid var(--pe-yellow);
+    padding: 5vw;
+    border-radius: 3vw;
+    margin: 0 3vw 5vw;
+    border: 2px solid var(--pe-yellow);
+    text-align: center;
 }
 
 .alert-icon {
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 12vw, 4rem);
 }
 
 .alert-text h4 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    font-size: clamp(1.1rem, 5vw, 1.4rem);
+    margin-bottom: 2vw;
     color: var(--pe-yellow);
     font-weight: 700;
+    line-height: 1.3;
 }
 
 .alert-text p {
     opacity: 0.9;
     margin: 0;
+    font-size: clamp(0.95rem, 4vw, 1.15rem);
     font-weight: 500;
+    line-height: 1.5;
 }
 
 .timeline-urgency {
@@ -868,30 +914,33 @@
 }
 
 .timeline-q {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+    font-size: clamp(1.2rem, 5.5vw, 1.5rem);
+    margin-bottom: 4vw;
     font-weight: 600;
+    padding: 0 3vw;
 }
 
 .timeline-options {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin-bottom: 1.5rem;
+    flex-direction: column;
+    gap: 2vw;
+    margin-bottom: 4vw;
+    padding: 0 4vw;
 }
 
 .timeline-btn {
     background: rgba(255,255,255,0.1);
     border: 2px solid var(--pe-yellow);
     color: white;
-    padding: 1rem 1.5rem;
-    border-radius: 8px;
+    padding: 4vw;
+    border-radius: 3vw;
     cursor: pointer;
-    font-size: 0.9rem;
-    transition: all 0.2s;
+    font-size: clamp(1rem, 4.5vw, 1.2rem);
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .timeline-btn:hover {
@@ -900,43 +949,49 @@
 }
 
 .timeline-result {
-    font-size: 1.1rem;
+    font-size: clamp(1.1rem, 5vw, 1.4rem);
     font-weight: 600;
     min-height: 1.5em;
     color: var(--pe-yellow);
+    padding: 0 3vw;
+    line-height: 1.5;
 }
 
-/* SECCIÓN 7: CTA */
+/* ========== SECCIÓN 7: CTA ========== */
 .cta-section {
     background: linear-gradient(135deg, var(--pe-blue) 0%, var(--pe-dark) 100%);
     color: white;
-    padding: 4rem 0;
+    padding: 8vw 0;
     text-align: center;
+    width: 100%;
 }
 
 .cta-section h2 {
-    font-size: 1.9rem;
-    margin-bottom: 1rem;
+    font-size: clamp(1.3rem, 6vw, 2rem);
+    margin-bottom: 3vw;
     font-weight: 700;
+    padding: 0 3vw;
+    line-height: 1.3;
 }
 
 .cta-lead {
-    font-size: 1.1rem;
+    font-size: clamp(1.05rem, 4.5vw, 1.3rem);
     opacity: 0.95;
-    max-width: 600px;
-    margin: 0 auto 2rem;
+    max-width: 90%;
+    margin: 0 auto 5vw;
     font-weight: 500;
+    line-height: 1.5;
+    padding: 0 3vw;
 }
 
 .mega-cta {
     display: block;
     background: var(--pe-yellow);
     color: var(--pe-dark);
-    padding: 1.5rem 2rem;
-    border-radius: 12px;
+    padding: 5vw 6vw;
+    border-radius: 3vw;
     text-decoration: none;
-    max-width: 400px;
-    margin: 0 auto 2rem;
+    margin: 0 4vw 5vw;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     transition: transform 0.2s;
 }
@@ -947,33 +1002,36 @@
 
 .cta-main {
     display: block;
-    font-size: 1.2rem;
+    font-size: clamp(1.15rem, 5.5vw, 1.4rem);
     font-weight: 700;
-    margin-bottom: 0.3rem;
+    margin-bottom: 1vw;
+    line-height: 1.3;
 }
 
 .cta-sub {
     display: block;
-    font-size: 0.85rem;
+    font-size: clamp(0.85rem, 3.5vw, 1rem);
     color: var(--pe-dark);
     opacity: 0.8;
     font-weight: 500;
 }
 
 .final-reassurance {
-    margin-bottom: 2rem;
+    margin-bottom: 5vw;
+    padding: 0 3vw;
 }
 
 .final-reassurance p {
-    margin: 0.5rem 0;
-    font-size: 0.9rem;
+    margin: 2vw 0;
+    font-size: clamp(0.95rem, 4vw, 1.1rem);
     opacity: 0.9;
     font-weight: 500;
 }
 
 .micro-copy {
-    font-size: 0.7rem;
+    font-size: clamp(0.7rem, 3vw, 0.85rem);
     opacity: 0.7;
+    padding: 0 4vw;
 }
 
 .micro-copy a {
@@ -982,297 +1040,103 @@
     font-weight: 600;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .math-showdown {
-        grid-template-columns: 1fr;
+/* ============================================
+   DESKTOP - Vistas grandes
+   ============================================ */
+@media (min-width: 769px) {
+    .sunrun-funnel {
+        font-size: 16px;
     }
     
-    .vs-center {
-        order: -1;
+    .sunrun-funnel .container {
+        max-width: 800px;
+        padding: 0 2rem;
+    }
+    
+    .problem-section,
+    .solution-section,
+    .comparison-section,
+    .battery-section,
+    .objection-section,
+    .urgency-section,
+    .cta-section {
+        padding: 4rem 0;
     }
     
     .how-it-works-simple {
-        flex-direction: column;
+        flex-direction: row;
     }
     
     .arrow {
-        transform: rotate(90deg);
+        transform: rotate(0deg);
     }
     
-    .problem-section h2 {
-        font-size: 1.6rem;
+    .simple-step {
+        width: 200px;
+        padding: 1.5rem;
+    }
+    
+    .math-showdown {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        gap: 1.5rem;
+    }
+    
+    .vs-center {
+        align-self: center;
     }
     
     .battery-scenarios {
-        grid-template-columns: 1fr;
-    }
-}
-<!-- CSS CORRECCIÓN MÓVIL - Agregar al final del <style> de tu página PPA -->
-<style>
-/* ============================================
-   CORRECCIONES MÓVIL PARA PÁGINA PPA
-   Agregar al final de tu CSS existente
-   ============================================ */
-
-/* Tablets y móviles grandes */
-@media (max-width: 768px) {
-    .sunrun-funnel .container {
-        padding: 0 1rem;
-        max-width: 100%;
-    }
-    
-    /* Header más grande en móvil */
-    .problem-section {
-        padding: 3rem 0;
-    }
-    
-    .problem-section h2 {
-        font-size: 1.8rem;
-        line-height: 1.3;
-        padding: 0 0.5rem;
-    }
-    
-    .problem-section .lead {
-        font-size: 1.1rem;
-        padding: 0 0.5rem;
-    }
-    
-    /* Solución - pasos más grandes */
-    .solution-section {
-        padding: 3rem 0;
-    }
-    
-    .solution-section h3 {
-        font-size: 1.4rem;
-        padding: 0 1rem;
-    }
-    
-    .battery-highlight {
-        margin: 0 0.5rem 1.5rem;
-        padding: 1.2rem;
-    }
-    
-    .battery-icon {
-        font-size: 2.5rem;
-    }
-    
-    .battery-text strong {
-        font-size: 1rem;
-    }
-    
-    .battery-text p {
-        font-size: 0.9rem;
-    }
-    
-    /* Pasos en columna y más grandes */
-    .simple-step {
-        width: 100%;
-        max-width: 280px;
-        margin: 0 auto;
-        padding: 1.5rem;
-    }
-    
-    .simple-step .icon {
-        font-size: 3rem;
-    }
-    
-    .simple-step p {
-        font-size: 1.1rem;
-    }
-    
-    .simple-step .detail {
-        font-size: 0.95rem;
-    }
-    
-    /* Comparación - tarjetas más anchas */
-    .comparison-section {
-        padding: 3rem 0;
-    }
-    
-    .comparison-section h3 {
-        font-size: 1.5rem;
-        padding: 0 1rem;
-    }
-    
-    .math-card {
-        margin: 0 0.5rem;
-    }
-    
-    .math-header {
-        font-size: 1rem;
-        padding: 1rem;
-    }
-    
-    .feature-row {
-        font-size: 1rem;
-        padding: 1rem 0;
-    }
-    
-    .year-highlight {
-        font-size: 1rem;
-    }
-    
-    .math-total {
-        font-size: 1.1rem;
-    }
-    
-    .amount.bad, .amount.good {
-        font-size: 1.4rem;
-    }
-    
-    /* Batería sección */
-    .battery-section {
-        padding: 3rem 0;
-    }
-    
-    .battery-section h3 {
-        font-size: 1.5rem;
-        padding: 0 1rem;
+        flex-direction: row;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
     
     .scenario {
-        margin: 0 0.5rem;
+        margin: 0;
+    }
+    
+    .zero-investment {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .zero-item {
+        width: 160px;
         padding: 1.5rem;
     }
     
-    .scenario-time {
-        font-size: 1.3rem;
-    }
-    
-    .scenario p {
-        font-size: 1rem;
-    }
-    
-    /* $0 inversión */
-    .objection-section {
-        padding: 3rem 0;
-    }
-    
-    .objection-section h3 {
-        font-size: 1.3rem;
-        padding: 0 1rem;
-    }
-    
-    .zero-item {
-        width: calc(50% - 0.5rem);
-        min-width: 140px;
-        padding: 1.2rem;
-    }
-    
-    .zero-x {
-        font-size: 2.2rem;
-    }
-    
-    .zero-label {
-        font-size: 0.8rem;
-    }
-    
-    /* Urgencia */
-    .urgency-section {
-        padding: 3rem 0;
-    }
-    
-    .pr-alert {
-        margin: 0 0.5rem 1.5rem;
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .alert-icon {
-        font-size: 2.5rem;
-    }
-    
-    .alert-text h4 {
-        font-size: 1.1rem;
+    .timeline-options {
+        flex-direction: row;
+        justify-content: center;
     }
     
     .timeline-btn {
-        width: 100%;
-        max-width: 280px;
-        margin: 0.3rem 0;
-        font-size: 1rem;
-        padding: 1.2rem;
-    }
-    
-    /* CTA final */
-    .cta-section {
-        padding: 3rem 0;
-    }
-    
-    .cta-section h2 {
-        font-size: 1.5rem;
-        padding: 0 1rem;
-    }
-    
-    .cta-lead {
-        font-size: 1.05rem;
-        padding: 0 1rem;
+        width: auto;
+        padding: 1rem 2rem;
     }
     
     .mega-cta {
-        margin: 0 1rem 2rem;
-        padding: 1.3rem 1.5rem;
-    }
-    
-    .cta-main {
-        font-size: 1.1rem;
+        max-width: 400px;
+        margin: 0 auto 2rem;
+        padding: 1.5rem 2rem;
     }
 }
+</style>
 
-/* Móviles pequeños */
-@media (max-width: 480px) {
-    .problem-section h2 {
-        font-size: 1.5rem;
-    }
+<script>
+function showLoss(years) {
+    const losses = {
+        1: "Con $1,500 ya tendrías meses de solar + batería incluida",
+        5: "Con $8,000 quemados, ya tendrías años de luz propia",
+        10: "Con $18,000, hoy tu sistema estaría casi pagado"
+    };
     
-    .problem-section .lead {
-        font-size: 1rem;
-    }
-    
-    .sunrun-logo-link {
-        font-size: 2rem;
-    }
-    
-    .solution-section h3 {
-        font-size: 1.2rem;
-    }
-    
-    .comparison-section h3 {
-        font-size: 1.3rem;
-    }
-    
-    .battery-section h3 {
-        font-size: 1.3rem;
-    }
-    
-    .objection-section h3 {
-        font-size: 1.15rem;
-    }
-    
-    .cta-section h2 {
-        font-size: 1.3rem;
-    }
-    
-    .zero-item {
-        width: 100%;
-        max-width: 200px;
-    }
+    const result = document.getElementById('loss-result');
+    result.textContent = losses[years];
 }
-
-/* Fix para que no se vea pequeño en móviles grandes */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .sunrun-funnel .container {
-        max-width: 90%;
-    }
-}
-
-/* Prevenir zoom en inputs en iOS */
-@supports (-webkit-touch-callout: none) {
-    .timeline-btn {
-        font-size: 16px;
-    }
-}
+</script>
 </style>
 </style>
 
