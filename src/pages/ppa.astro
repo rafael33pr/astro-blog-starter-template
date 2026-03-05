@@ -1011,6 +1011,272 @@
         grid-template-columns: 1fr;
     }
 }
+<!-- CSS CORRECCIÓN MÓVIL - Agregar al final del <style> de tu página PPA -->
+<style>
+/* ============================================
+   CORRECCIONES MÓVIL PARA PÁGINA PPA
+   Agregar al final de tu CSS existente
+   ============================================ */
+
+/* Tablets y móviles grandes */
+@media (max-width: 768px) {
+    .sunrun-funnel .container {
+        padding: 0 1rem;
+        max-width: 100%;
+    }
+    
+    /* Header más grande en móvil */
+    .problem-section {
+        padding: 3rem 0;
+    }
+    
+    .problem-section h2 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+        padding: 0 0.5rem;
+    }
+    
+    .problem-section .lead {
+        font-size: 1.1rem;
+        padding: 0 0.5rem;
+    }
+    
+    /* Solución - pasos más grandes */
+    .solution-section {
+        padding: 3rem 0;
+    }
+    
+    .solution-section h3 {
+        font-size: 1.4rem;
+        padding: 0 1rem;
+    }
+    
+    .battery-highlight {
+        margin: 0 0.5rem 1.5rem;
+        padding: 1.2rem;
+    }
+    
+    .battery-icon {
+        font-size: 2.5rem;
+    }
+    
+    .battery-text strong {
+        font-size: 1rem;
+    }
+    
+    .battery-text p {
+        font-size: 0.9rem;
+    }
+    
+    /* Pasos en columna y más grandes */
+    .simple-step {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+        padding: 1.5rem;
+    }
+    
+    .simple-step .icon {
+        font-size: 3rem;
+    }
+    
+    .simple-step p {
+        font-size: 1.1rem;
+    }
+    
+    .simple-step .detail {
+        font-size: 0.95rem;
+    }
+    
+    /* Comparación - tarjetas más anchas */
+    .comparison-section {
+        padding: 3rem 0;
+    }
+    
+    .comparison-section h3 {
+        font-size: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .math-card {
+        margin: 0 0.5rem;
+    }
+    
+    .math-header {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    
+    .feature-row {
+        font-size: 1rem;
+        padding: 1rem 0;
+    }
+    
+    .year-highlight {
+        font-size: 1rem;
+    }
+    
+    .math-total {
+        font-size: 1.1rem;
+    }
+    
+    .amount.bad, .amount.good {
+        font-size: 1.4rem;
+    }
+    
+    /* Batería sección */
+    .battery-section {
+        padding: 3rem 0;
+    }
+    
+    .battery-section h3 {
+        font-size: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .scenario {
+        margin: 0 0.5rem;
+        padding: 1.5rem;
+    }
+    
+    .scenario-time {
+        font-size: 1.3rem;
+    }
+    
+    .scenario p {
+        font-size: 1rem;
+    }
+    
+    /* $0 inversión */
+    .objection-section {
+        padding: 3rem 0;
+    }
+    
+    .objection-section h3 {
+        font-size: 1.3rem;
+        padding: 0 1rem;
+    }
+    
+    .zero-item {
+        width: calc(50% - 0.5rem);
+        min-width: 140px;
+        padding: 1.2rem;
+    }
+    
+    .zero-x {
+        font-size: 2.2rem;
+    }
+    
+    .zero-label {
+        font-size: 0.8rem;
+    }
+    
+    /* Urgencia */
+    .urgency-section {
+        padding: 3rem 0;
+    }
+    
+    .pr-alert {
+        margin: 0 0.5rem 1.5rem;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .alert-icon {
+        font-size: 2.5rem;
+    }
+    
+    .alert-text h4 {
+        font-size: 1.1rem;
+    }
+    
+    .timeline-btn {
+        width: 100%;
+        max-width: 280px;
+        margin: 0.3rem 0;
+        font-size: 1rem;
+        padding: 1.2rem;
+    }
+    
+    /* CTA final */
+    .cta-section {
+        padding: 3rem 0;
+    }
+    
+    .cta-section h2 {
+        font-size: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .cta-lead {
+        font-size: 1.05rem;
+        padding: 0 1rem;
+    }
+    
+    .mega-cta {
+        margin: 0 1rem 2rem;
+        padding: 1.3rem 1.5rem;
+    }
+    
+    .cta-main {
+        font-size: 1.1rem;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .problem-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .problem-section .lead {
+        font-size: 1rem;
+    }
+    
+    .sunrun-logo-link {
+        font-size: 2rem;
+    }
+    
+    .solution-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    .comparison-section h3 {
+        font-size: 1.3rem;
+    }
+    
+    .battery-section h3 {
+        font-size: 1.3rem;
+    }
+    
+    .objection-section h3 {
+        font-size: 1.15rem;
+    }
+    
+    .cta-section h2 {
+        font-size: 1.3rem;
+    }
+    
+    .zero-item {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+/* Fix para que no se vea pequeño en móviles grandes */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .sunrun-funnel .container {
+        max-width: 90%;
+    }
+}
+
+/* Prevenir zoom en inputs en iOS */
+@supports (-webkit-touch-callout: none) {
+    .timeline-btn {
+        font-size: 16px;
+    }
+}
+</style>
 </style>
 
 <script>
