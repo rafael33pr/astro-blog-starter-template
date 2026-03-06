@@ -1137,6 +1137,82 @@ function showLoss(years) {
     result.textContent = losses[years];
 }
 </script>
+/* ARREGLO ESPECÍFICO PARA 1920x1080 Y DESKTOP */
+@media (min-width: 1200px) {
+    .math-showdown {
+        display: grid;
+        grid-template-columns: 1fr 80px 1fr;
+        gap: 2rem;
+        align-items: stretch;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    
+    .math-card {
+        min-width: 380px;
+        max-width: 450px;
+    }
+    
+    .math-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.2rem 1.5rem;
+        min-height: 70px;
+        gap: 1.5rem;
+    }
+    
+    .math-header span:first-child {
+        font-size: 1.3rem;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+    
+    .math-header .trend {
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-radius: 20px;
+    }
+    
+    .vs-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    
+    .vs-text {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .savings-tag {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* PARA PANTALLAS MEDIANAS (1024px - 1199px) */
+@media (min-width: 1024px) and (max-width: 1199px) {
+    .math-showdown {
+        gap: 1.5rem;
+    }
+    
+    .math-card {
+        min-width: 320px;
+    }
+    
+    .math-header {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .math-header span:first-child {
+        font-size: 1.1rem;
+    }
+}
 </style>
 </style>
 
