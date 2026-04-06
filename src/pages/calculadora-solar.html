@@ -161,31 +161,73 @@
     <p class="disc">Nota: Todos los pagos son aproximados. Ofertas en Sunrun son diferentes.</p>
   </div>
 </div>
-<script>
-const $=id=>document.getElementById(id);
-const fmt=v=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(v);
-function trk(){const r=$('sr');const p=((r.value-r.min)/(r.max-r.min))*100;r.style.setProperty('--p',p+'%')}
-function sp(s){const r=$('sr'),n=$('sn');if(s==='r'){n.value=+r.value}else{let v=+n.value;if(isNaN(v))return;v=Math.min(50,Math.max(6,v));n.value=v;r.value=v}trk();up()}
 function calc(){
-  const p=+$('sr').value||12,bt=$('bt').value,bq=+$('bq').value,hb=bq>0,hi=$('it').checked&&hb;
-  const pc=p*940;
+  const p=+$('sr').value||12,bt=$('bt').value,bq=+$('bq').value,hb=bq>0;
+  
+  // ✅ Pelio NO tiene Solar Insure disponible
+  const isPelio=bt==='Pelio 10kw';
+  const hi=$('it').checked&&hb&&!isPelio; // Desactiva seguro si es Pelio
+  
+  // ✅ CORREGIDO: $920 por panel (no $940)
+  const pc=p*920;
+  
   let bc=0;
   if(hb){
-    if(bt==='Pelio 10kw')bc=6000*bq;
+    if(isPelio)bc=6000*bq;
     else if(bt==='Fortress 16kw')bc=10995*bq;
-    else{const tp=[0,12000,23500,35000,46500];bc=tp[bq]||bq*12000;}
+    else{
+      // Tesla Powerwall
+      const tp=[0,12000,23500,35000,46500];
+      bc=tp[bq]||bq*12000;
+    }
   }
-  const ic=hi?2500+(40*p)+(2000*(bq-1)):0;
+  
+  // ✅ CORREGIDO: Solo Fortress y Tesla tienen Solar Insure
+  let ic=0;
+  if(hi){
+    if(bt==='Fortress 16kw'){
+      // Tabla 1: $2,400 base por batería + $40 por panel
+      ic=(2400*bq)+(40*p);
+    }else{
+      // Tesla Powerwall (Tabla 3): $2,025 base por batería + $40 por panel
+      ic=(2025*bq)+(40*p);
+    }
+  }
+  
   const tot=pc+bc+ic;
   const r2=0.0599/12,n=180;
   const mo=tot>0?tot*(r2*Math.pow(1+r2,n))/(Math.pow(1+r2,n)-1):0;
-  return{p,bt,bq,hb,hi,pc,bc,ic,tot,mo};
+  
+  // Guardar referencia para actualizar UI
+  return{p,bt,bq,hb,hi,isPelio,pc,bc,ic,tot,mo};
 }
+
 function up(){
   const v=calc();
   const ib=$('ib'),it=$('it'),id=$('id'),lk=$('lk');
-  if(!v.hb){ib.classList.add('off');it.disabled=true;it.checked=false;id.textContent='El seguro Solar Insure solo está disponible para sistemas con baterías.';lk.style.display='none';}
-  else{ib.classList.remove('off');it.disabled=false;id.textContent='Protege tu inversión con cobertura completa para mantenimiento, monitoreo y reparaciones imprevistas.';lk.style.display=v.hi?'inline':'none';}
+  
+  if(!v.hb){
+    // Sin baterías
+    ib.classList.add('off');
+    it.disabled=true;
+    it.checked=false;
+    id.textContent='El seguro Solar Insure solo está disponible para sistemas con baterías.';
+    lk.style.display='none';
+  }else if(v.isPelio){
+    // ✅ NUEVO: Pelio no tiene seguro
+    ib.classList.add('off');
+    it.disabled=true;
+    it.checked=false;
+    id.textContent='Solar Insure no está disponible para sistemas con baterías Pelio.';
+    lk.style.display='none';
+  }else{
+    // Fortress o Tesla con baterías
+    ib.classList.remove('off');
+    it.disabled=false;
+    id.textContent='Protege tu inversión con cobertura completa para mantenimiento, monitoreo y reparaciones imprevistas.';
+    lk.style.display=v.hi?'inline':'none';
+  }
+  
   $('bt').disabled=!v.hb;
   $('tc').innerHTML=fmt(v.tot);
   $('mp').innerHTML=fmt(v.mo)+' <span style="font-size:1.1rem;font-weight:500;color:#6b7a8d">/ mes</span>';
@@ -193,31 +235,5 @@ function up(){
   if(v.hb){$('br').style.display='flex';$('bc').textContent=fmt(v.bc);}else $('br').style.display='none';
   if(v.hi){$('ir').style.display='flex';$('ic').textContent=fmt(v.ic);}else $('ir').style.display='none';
 }
-function buy(){
-  const v=calc();
-  conf();
-  const msg='¡Hola! Me interesa una cotización de equipo solar de Pura Energía PR:\n\n'+
-    '☀️ *Paneles Solares:* '+v.p+'\n'+
-    '🔋 *Batería:* '+(v.hb?v.bt+' (x'+v.bq+')':'Sin baterías')+'\n'+
-    '🛡️ *Seguro Solar Insure:* '+(v.hi?'Sí':'No (N/A)')+'\n\n'+
-    '💰 *Costo Total Estimado:* '+fmt(v.tot)+'\n'+
-    '📅 *Pago Mensual Estimado:* '+fmt(v.mo)+' (15 años, 5.99% APR)\n\n'+
-    '¿Podemos coordinar para afinar los detalles?';
-  setTimeout(()=>window.open('https://wa.me/17879729553?text='+encodeURIComponent(msg),'_blank'),700);
-}
-function rst(){$('sr').value=12;$('sn').value=12;$('bt').value='Tesla Powerwall 3.0';$('bq').value='1';$('it').checked=true;trk();up();}
-function conf(){
-  const cv=$('cc'),cx=cv.getContext('2d');
-  cv.width=innerWidth;cv.height=innerHeight;
-  const cols=['#22c55e','#f59e0b','#233247','#fff','#60a5fa'];
-  const ps=Array.from({length:130},()=>({x:Math.random()*cv.width,y:Math.random()*cv.height-cv.height,r:Math.random()*8+4,d:Math.random()*80+20,c:cols[Math.floor(Math.random()*cols.length)],ta:0,ti:Math.random()*.07+.05}));
-  let a=0,t=0;
-  function dr(){cx.clearRect(0,0,cv.width,cv.height);a+=.01;t++;
-    ps.forEach(p=>{p.ta+=p.ti;p.y+=(Math.cos(a+p.d)+2+p.r/2)*1.5;const tl=Math.sin(p.ta)*12;cx.beginPath();cx.lineWidth=p.r;cx.strokeStyle=p.c;cx.moveTo(p.x+tl+p.r/4,p.y);cx.lineTo(p.x+tl,p.y+tl+p.r/4);cx.stroke();});
-    if(t<220)requestAnimationFrame(dr);else cx.clearRect(0,0,cv.width,cv.height);}
-  dr();
-}
-trk();$('it').checked=true;up();
-</script>
 </body>
 </html>
